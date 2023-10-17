@@ -2,6 +2,8 @@ import numpy as np
 import cv2
 import tkinter as tk
 from tkinter import filedialog
+from tkinter import ttk
+from ttkthemes import ThemedTk
 
 def colorize_image(input_path):
     print("Loading the colorized version")
@@ -55,16 +57,17 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Image Colorization")
 
-    window_width = 600
-    window_height = 400
+    window_width = 450
+    window_height = 200
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     x = (screen_width - window_width) // 2
     y = (screen_height - window_height) // 2
     root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-    browse_button = tk.Button(root, text="Browse for an Image", command=browse_image)
-    browse_button.pack()
+    style = ttk.Style()
+    style.configure("TButton", padding=6, relief="flat", background="#007ACC", foreground="blue")
+    browse_button = ttk.Button(root, text="Browse for an Image", command=browse_image, style="TButton")
+    browse_button.pack(pady=30)
 
     root.mainloop()
-    
