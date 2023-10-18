@@ -66,7 +66,7 @@ if __name__ == "__main__":
     root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
     style = ttk.Style()
-    style.configure("TButton", padding=6, relief="flat", background="#007ACC", foreground="blue")
+    style.configure("TButton", padding=6, relief="flat", background="#6F4685", foreground="blue")
     browse_button = ttk.Button(root, text="Browse for an Image", command=browse_image, style="TButton")
     browse_button.pack(pady=30)
 
