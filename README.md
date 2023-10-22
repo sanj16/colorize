@@ -32,9 +32,5 @@ Colorize brings life to your black and white images with a simple and intuitive 
 
 Feel free to fork the project and submit pull requests.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 Happy colorizing!
 
